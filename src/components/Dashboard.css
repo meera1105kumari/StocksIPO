@@ -1,0 +1,37 @@
+.custom-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.custom-dashboard-header {
+  margin-bottom: 20px;
+}
+
+.custom-logout-button {
+  background-color: #2ecc71; /* Green color for the button */
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.custom-dashboard-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.custom-dashboard-navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.custom-dashboard-navigation a:hover {
+  color: #2ecc71; /* Green color on hover */
+}
+
+.custom-dashboard-content {
+  text-align: center;
+}
