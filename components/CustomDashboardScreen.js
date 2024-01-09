@@ -66,9 +66,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    backgroundColor: '#f0f0f0', // Adjust background color
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
@@ -76,17 +77,23 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
+    borderWidth: 1,
+    borderColor: '#ddd', // Border color
   },
   ipoName: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
   },
   managerInfo: {
     fontSize: 16,
+    color: '#555',
     marginTop: 8,
   },
   ipoInfo: {
     fontSize: 16,
+    color: '#777',
     marginTop: 4,
   },
   dateInfo: {
@@ -95,5 +102,6 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+
 
 export default CustomDashboardScreen;

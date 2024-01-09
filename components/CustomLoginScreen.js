@@ -31,22 +31,30 @@ const CustomLoginScreen = ({ navigation }) => {
   };
 
   const handleLogin = () => {
-    
     const { username, password } = authState;
-
-    
-    if (
-      username === "meera" &&
-      password === "12345"
-    ) {
-      
-      console.log("Users authenticated");
-      navigation.navigate("Dashboard");
+  
+    const isValidCredentials = checkCredentials(username, password);
+  
+    if (isValidCredentials) {
+      handleSuccessfulLogin();
     } else {
-      
-      dispatch(setErrorMessage("Invalid creds"));
+      handleFailedLogin();
     }
   };
+  
+  const checkCredentials = (username, password) => {
+    return username === "12345" && password === "12345";
+  };
+  
+  const handleSuccessfulLogin = () => {
+    console.log("Users authenticated");
+    navigation.navigate("Dashboard");
+  };
+  
+  const handleFailedLogin = () => {
+    dispatch(setErrorMessage("Invalid credentials"));
+  };
+  
 
   const handleSignup = () => {
     navigation.navigate("Signup");
