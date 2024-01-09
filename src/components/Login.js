@@ -18,16 +18,31 @@ const UserLogin = ({ onUserLogin }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+  
     const { enteredUsername, enteredPassword } = userCredentials;
-
-    if (enteredUsername === 'meera' && enteredPassword === 'password') {
+  
+    if (areCredentialsValid(enteredUsername, enteredPassword)) {
       const userData = { username: enteredUsername };
       onUserLogin(userData);
-      navigation('/dashboard');
+      navigateToDashboard();
     } else {
-      alert('Invalid credentials');
+      displayInvalidCredentialsAlert();
     }
   };
+  
+  const areCredentialsValid = (username, password) => {
+    return username === 'meera' && password === 'password';
+  };
+  
+  const navigateToDashboard = () => {
+    navigation('/dashboard');
+  };
+  
+  const displayInvalidCredentialsAlert = () => {
+    alert('Invalid credentials');
+  };
+  
+
 
   return (
     <div className="custom-page-container custom-login-container">
